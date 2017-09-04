@@ -1,6 +1,6 @@
 # PiwikTracker iOS SDK
 
-The PiwikTracker is an iOS, tvOS and macOS SDK for sending app analytics to a Piwik server.
+The PiwikTracker is an iOS, tvOS and macOS SDK for sending app analytics to a Piwik server. PiwikTracker can be used from Swift and [Objective-C](#objective-c-compatibility).
 
 **Fancy help improving this SDK? Check [this list](https://github.com/piwik/piwik-sdk-ios/issues?utf8=✓&q=is%3Aopen%20is%3Aissue%20label%3Adiscussion%20label%3Aswift3) to see what is left and can be improved.**
 
@@ -119,7 +119,7 @@ PiwikTracker.shared?.logger = DefaultLogger(minLevel: .error)
 
 You can also write your own `Logger` and send the logs whereever you want. Just write a new class/struct an let it conform to the `Logger` protocol.
 
-### Custom User Agent
+#### Custom User Agent
 The `PiwikTracker` will create a default user agent derived from the WKWebView user agent. This is why you should always instantiate and configure the `PiwikTracker` on the main thread.
 You can instantiate the `PiwikTracker` using your own user agent.
 
@@ -127,7 +127,7 @@ You can instantiate the `PiwikTracker` using your own user agent.
 PiwikTracker.configureSharedInstance(withSiteID: "5", baseURL: URL(string: "http://your.server.org/path-to-piwik/piwik.php")!, userAgent: "Your custom user agent")
 ```
 
-## Objective-C compatibility
+#### Objective-C compatibility
 
 Version 4 of this SDK is written in Swift, but you can use it in your Objective-C project as well. If you don't want to update you can still use the unsupported older [version 3](https://github.com/piwik/piwik-sdk-ios/tree/version-3). Using the Swift SDK from Objective-C should be pretty straight forward.
 
